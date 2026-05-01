@@ -47,6 +47,21 @@ squire/
 
 Open PowerShell at the repo root.
 
+### Environment variables
+
+Both halves of the app expect a local `.env` file with credentials for the
+Supabase project. Real values never enter git — only the `.env.example`
+templates are committed.
+
+```powershell
+copy backend\.env.example backend\.env
+copy frontend\.env.example frontend\.env
+```
+
+Then open each new `.env` and fill in real values from your Supabase
+project (Project Settings → API). The comments in each `.env.example`
+file explain which Supabase value maps to which variable.
+
 ### Backend
 
 ```powershell
